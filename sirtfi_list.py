@@ -71,12 +71,12 @@ for i in root.findall(".//{%s}EntityDescriptor" % NS['md']):
             elif contactType == "other":
                 pass
         if len(technical) > 0:
-            print(entityID, RegBy, OrgID, "technical", ','.join(technical), sep=',')
+            print(entityID, RegBy, OrgID.replace(',', ''), "technical", ','.join(technical), sep=',')
             break
         elif len(administrative) > 0:
-            print(entityID, RegBy, OrgID, "administrative", ','.join(administrative), sep=',')
+            print(entityID, RegBy, OrgID.replace(',', ''), "administrative", ','.join(administrative), sep=',')
             break
         elif len(support) > 0:
-            print(entityID, RegBy, OrgID, "support", ','.join(support), sep=',')
+            print(entityID, RegBy, OrgID.replace(',', ''), "support", ','.join(support), sep=',')
             break
         #print(entityID, len(technical), len(administrative), len(support))
