@@ -23,13 +23,13 @@ NS = dict(md="urn:oasis:names:tc:SAML:2.0:metadata",
           remd="http://refeds.org/metadata",
           icmd="http://id.incommon.org/metadata")
 
-#MDOBJ = 'https://mds.edugain.org/edugain-v1.xml'
+MDOBJ = 'https://mds.edugain.org/edugain-v1.xml'
 #MDOBJ = 'http://md.incommon.org/InCommon/InCommon-metadata.xml'
-MDOBJ = "./edugain-v1.xml"
+#MDOBJ = "./edugain-v1.xml"
 
 try:
-    #root = etree.parse(urlopen(MDOBJ))
-    root = etree.parse(MDOBJ)
+    root = etree.parse(urlopen(MDOBJ))
+    #root = etree.parse(MDOBJ)
     print("Retrieved MD from ", MDOBJ)
 except:
     print("unable to retrieve MD from ", MDOBJ)
